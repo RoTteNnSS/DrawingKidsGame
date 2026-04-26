@@ -2,15 +2,14 @@
 
 ## Supported Versions
 
-Use this section to tell people about which versions of your project are
-currently being supported with security updates.
+Security updates are provided for the latest published release only. When a
+new release is published, previously published releases are no longer
+supported with security updates unless explicitly stated otherwise.
 
-| Version | Supported          |
-| ------- | ------------------ |
-| 5.1.x   | :white_check_mark: |
-| 5.0.x   | :x:                |
-| 4.0.x   | :white_check_mark: |
-| < 4.0   | :x:                |
+| Release line                 | Supported          |
+| ---------------------------- | ------------------ |
+| Latest published release     | :white_check_mark: |
+| Any earlier release          | :x:                |
 
 ## Reporting a Vulnerability
 
