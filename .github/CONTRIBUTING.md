@@ -62,16 +62,52 @@ Open `DrawingKidsGame.slnx` in Visual Studio for the full IDE experience.
 
 ---
 
+## Branch Strategy
+
+This project uses **GitHub Flow**:
+
+- `master` is the **stable, protected branch** — never push to it directly.
+- All work (features, fixes, docs) must go through a **Pull Request**.
+
+### Branch naming convention
+
+| Type | Pattern | Example |
+|------|---------|---------|
+| New feature | `feature/<short-description>` | `feature/stamp-tool` |
+| Bug fix | `fix/<short-description>` | `fix/flood-fill-crash` |
+| Documentation | `docs/<short-description>` | `docs/update-readme` |
+| Refactoring | `refactor/<short-description>` | `refactor/bitmap-service` |
+
+### Workflow
+
+```bash
+# 1. Fork the repo on GitHub, then clone your fork
+git clone https://github.com/<your-username>/DrawingKidsGame.git
+cd DrawingKidsGame/ColorKids
+
+# 2. Create a branch from master
+git checkout -b feature/my-feature
+
+# 3. Make your changes, then commit
+git add .
+git commit -m "feat: describe what you did"
+
+# 4. Push your branch
+git push origin feature/my-feature
+
+# 5. Open a Pull Request on GitHub targeting master
+```
+
+---
+
 ## Pull Request Guidelines
 
-1. **Fork** the repository and create a branch from `master`:
-   ```bash
-   git checkout -b feature/my-feature
-   ```
+1. Base your PR on `master` (never on another contributor's branch).
 2. Keep changes focused — one PR per concern.
 3. Make sure the project **builds without warnings** (`dotnet build`).
 4. Write a clear PR description explaining *what* and *why*.
 5. Reference related issues with `Fixes #<number>` when applicable.
+6. A PR will be reviewed and merged by the maintainer — be patient and open to feedback.
 
 ---
 
