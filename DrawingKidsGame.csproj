@@ -13,6 +13,7 @@
     <None Include=".github\CONTRIBUTING.md" />
     <None Include=".github\ISSUE_TEMPLATE\bug_report.md" />
     <None Include=".github\ISSUE_TEMPLATE\feature_request.md" />
+    <None Include=".github\workflows\build.yml" />
   </ItemGroup>
 
   <ItemGroup>

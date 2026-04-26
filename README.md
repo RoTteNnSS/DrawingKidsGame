@@ -150,7 +150,7 @@ See [LICENSE.txt](LICENSE.txt) for the full text.
 
 ```
 DrawingKidsGame — A kid-friendly WPF coloring application
-Copyright (C) 2024  RoTteNnSS
+Copyright (C) 2026  RoTteNnSS
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
