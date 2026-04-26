@@ -1,0 +1,43 @@
+﻿<UserControl x:Class="ColorKids.Views.CanvasView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             Background="#FF1E1E2E"
+             SizeChanged="OnSizeChanged">
+
+    <ScrollViewer x:Name="CanvasScroller"
+                  HorizontalScrollBarVisibility="Auto"
+                  VerticalScrollBarVisibility="Auto"
+                  Background="#FF1E1E2E"
+                  PanningMode="Both">
+        <Grid x:Name="ZoomContainer">
+            <Grid.RenderTransform>
+                <ScaleTransform x:Name="ZoomTransform" ScaleX="1" ScaleY="1" CenterX="0" CenterY="0"/>
+            </Grid.RenderTransform>
+
+            <Image x:Name="DrawingImage"
+                   Stretch="Fill"
+                   HorizontalAlignment="Stretch"
+                   VerticalAlignment="Stretch"
+                   RenderOptions.BitmapScalingMode="NearestNeighbor"
+                   MouseDown="OnMouseDown"
+                   MouseMove="OnMouseMove"
+                   MouseUp="OnMouseUp"
+                   MouseEnter="OnMouseEnter"
+                   MouseLeave="OnMouseLeave"
+                   Cursor="None"/>
+
+            <Canvas x:Name="CursorCanvas" IsHitTestVisible="False">
+                <Ellipse x:Name="CursorEllipse"
+                         Width="30" Height="30"
+                         Stroke="White" StrokeThickness="2"
+                         Fill="Transparent"
+                         Opacity="0"
+                         RenderTransformOrigin="0.5,0.5">
+                    <Ellipse.RenderTransform>
+                        <ScaleTransform x:Name="CursorScale" ScaleX="1" ScaleY="1"/>
+                    </Ellipse.RenderTransform>
+                </Ellipse>
+            </Canvas>
+        </Grid>
+    </ScrollViewer>
+</UserControl>
