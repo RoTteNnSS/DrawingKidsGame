@@ -10,13 +10,19 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Include=".github\CONTRIBUTING.md" />
+    <None Include=".github\ISSUE_TEMPLATE\bug_report.md" />
+    <None Include=".github\ISSUE_TEMPLATE\feature_request.md" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.2" />
     <PackageReference Include="SharpVectors.Wpf" Version="1.8.5" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\Sounds\brush.wav"/>
-    <Resource Include="Resources\Sounds\fill.wav"/>
-    <Resource Include="Resources\Sounds\clear.wav"/>
+    <Resource Include="Resources\Sounds\brush.wav" />
+    <Resource Include="Resources\Sounds\fill.wav" />
+    <Resource Include="Resources\Sounds\clear.wav" />
   </ItemGroup>
 
 </Project>
