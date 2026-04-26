@@ -252,7 +252,7 @@ public partial class CanvasView : UserControl
         if (bmp.PixelWidth <= 1 || bmp.PixelHeight <= 1) return;
 
         // Scale = element width / bitmap width, adjusted for zoom so the cursor matches the visual size
-        double scale = (DrawingImage.ActualWidth / bmp.PixelWidth) * (_vm?.ZoomLevel ?? 1.0);
+        double scale = (DrawingImage.ActualWidth / bmp.PixelWidth) * _vm.ZoomLevel;
 
         double radiusBitmap = _vm.ActiveTool == DrawingTool.Eraser
             ? _vm.BrushSize * 1.5 / 2.0

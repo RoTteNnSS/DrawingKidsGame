@@ -394,12 +394,6 @@ public static class ImageToOutlineService
     /// </summary>
     private static void FillBackground(bool[] mask, int w, int h)
     {
-        var queue = new System.Collections.Generic.Queue<int>();
-        void Seed(int x, int y)
-        {
-            int idx = y * w + x;
-            if (!mask[idx]) { mask[idx] = true; queue.Enqueue(idx); } // true = "visité comme fond"
-        }
         // On va inverser la convention ici : flood-fill pour marquer "fond" à true temporairement
         // puis à la fin tout ce qui était false ET atteignable depuis les bords → false (fond)
         // On utilise un tableau séparé pour ne pas polluer le masque
