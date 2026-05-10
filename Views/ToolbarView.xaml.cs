@@ -35,7 +35,6 @@ public partial class ToolbarView : UserControl
             UpdateActiveColorIndicator(vm.ActiveColor);
             UndoBtn.IsEnabled = vm.CanUndo;
             BrushSlider.Value = vm.BrushSize;
-            TemplateList.ItemsSource = MainViewModel.Templates;
             vm.PropertyChanged += OnVmPropertyChanged;
         }
     }
@@ -153,15 +152,18 @@ public partial class ToolbarView : UserControl
 
     private void OnTemplateClick(object sender, RoutedEventArgs e)
     {
-        TemplatePopup.IsOpen = true;
+        if (_vm is null) return;
+        var picker = new TemplatePickerWindow { Owner = Window.GetWindow(this) };
+        if (picker.ShowDialog() == true && picker.SelectedTemplate is { } template)
+        {
+            _vm.SelectTemplateCommand.Execute(template);
+            _vm.ActiveTool = DrawingTool.Brush;
+        }
     }
 
     private void OnTemplateItemClick(object sender, RoutedEventArgs e)
     {
-        if (_vm is null || sender is not Button btn || btn.Tag is not DrawingTemplate template) return;
-        TemplatePopup.IsOpen = false;
-        _vm.SelectTemplateCommand.Execute(template);
-        _vm.ActiveTool = DrawingTool.Brush;
+        // Legacy handler kept for XAML compatibility (TemplatePopup removed)
     }
 
     private async void OnImportClick(object sender, RoutedEventArgs e)

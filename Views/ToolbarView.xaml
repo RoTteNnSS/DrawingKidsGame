@@ -170,34 +170,6 @@
             </Button>
         </UniformGrid>
 
-        <!-- Popup template (hors flux) -->
-        <Popup x:Name="TemplatePopup" PlacementTarget="{Binding ElementName=TemplateBtn}"
-               Placement="Right" StaysOpen="False" AllowsTransparency="True"
-               DockPanel.Dock="Top">
-            <Border Background="#EE1A1A2E" CornerRadius="12" Padding="10"
-                    BorderBrush="#55FFFFFF" BorderThickness="1">
-                <StackPanel>
-                    <TextBlock Text="Choisir un dessin" Foreground="White" FontSize="13"
-                               FontWeight="Bold" Margin="0,0,0,8" HorizontalAlignment="Center"/>
-                    <ItemsControl x:Name="TemplateList">
-                        <ItemsControl.ItemsPanel>
-                            <ItemsPanelTemplate><WrapPanel MaxWidth="240"/></ItemsPanelTemplate>
-                        </ItemsControl.ItemsPanel>
-                        <ItemsControl.ItemTemplate>
-                            <DataTemplate>
-                                <Button Width="80" Height="80" Margin="4" Cursor="Hand"
-                                        Background="#FF2A2A3E" BorderBrush="#55FFFFFF" BorderThickness="1"
-                                        Click="OnTemplateItemClick" Tag="{Binding}">
-                                    <TextBlock Text="{Binding Name}" Foreground="White" FontSize="11"
-                                               TextWrapping="Wrap" TextAlignment="Center"/>
-                                </Button>
-                            </DataTemplate>
-                        </ItemsControl.ItemTemplate>
-                    </ItemsControl>
-                </StackPanel>
-            </Border>
-        </Popup>
-
         <!-- Indicateur de traitement -->
         <Border x:Name="ProcessingIndicator" DockPanel.Dock="Top"
                 Background="#BB000000" CornerRadius="6"

@@ -4,5 +4,6 @@ namespace ColorKids.Models;
 public sealed record DrawingTemplate(
     string Name,
     string PathData,
-    double StrokeThickness = 6.0
+    double StrokeThickness = 6.0,
+    string Category = "Autres"
 );
