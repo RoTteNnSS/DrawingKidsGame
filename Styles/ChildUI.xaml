@@ -39,7 +39,7 @@
     <Style x:Key="ColorSwatchStyle" TargetType="ToggleButton">
         <Setter Property="HorizontalAlignment" Value="Stretch"/>
         <Setter Property="VerticalAlignment" Value="Stretch"/>
-        <Setter Property="Height" Value="28"/>
+        <Setter Property="Height" Value="40"/>
         <Setter Property="Margin" Value="2"/>
         <Setter Property="Padding" Value="0"/>
         <Setter Property="Cursor" Value="Hand"/>
@@ -52,13 +52,14 @@
                             Background="{TemplateBinding Background}"
                             BorderBrush="{TemplateBinding BorderBrush}"
                             BorderThickness="{TemplateBinding BorderThickness}"
-                            CornerRadius="12"/>
+                            CornerRadius="8"/>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsChecked" Value="True">
                             <Setter TargetName="border" Property="BorderBrush" Value="White"/>
+                            <Setter TargetName="border" Property="BorderThickness" Value="4"/>
                         </Trigger>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter TargetName="border" Property="Opacity" Value="0.85"/>
+                            <Setter TargetName="border" Property="Opacity" Value="0.82"/>
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>

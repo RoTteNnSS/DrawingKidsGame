@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using CommunityToolkit.Mvvm.ComponentModel;
@@ -86,18 +86,61 @@ public partial class MainViewModel : ObservableObject
 
     public static Color[] Palette { get; } =
     [
+        // Rouges
         Color.FromRgb(255,   0,   0),
+        Color.FromRgb(220,  20,  60),
+        Color.FromRgb(178,  34,  34),
+        Color.FromRgb(255, 160, 122),
+        // Oranges
         Color.FromRgb(255, 127,   0),
+        Color.FromRgb(255, 165,   0),
+        Color.FromRgb(255, 200, 100),
+        Color.FromRgb(210, 105,  30),
+        // Jaunes
         Color.FromRgb(255, 255,   0),
+        Color.FromRgb(255, 240,  50),
+        Color.FromRgb(240, 200,  40),
+        Color.FromRgb(255, 215,   0),
+        // Verts
         Color.FromRgb(127, 255,   0),
-        Color.FromRgb(0,   200,   0),
-        Color.FromRgb(0,   200, 200),
-        Color.FromRgb(0,   100, 255),
+        Color.FromRgb(  0, 200,   0),
+        Color.FromRgb( 34, 139,  34),
+        Color.FromRgb(144, 238, 144),
+        // Cyans
+        Color.FromRgb(  0, 200, 200),
+        Color.FromRgb(  0, 255, 255),
+        Color.FromRgb( 64, 224, 208),
+        Color.FromRgb(135, 206, 235),
+        // Bleus
+        Color.FromRgb(  0, 100, 255),
+        Color.FromRgb( 30, 144, 255),
+        Color.FromRgb(  0,   0, 205),
+        Color.FromRgb(100, 149, 237),
+        // Violets
         Color.FromRgb(100,   0, 255),
+        Color.FromRgb(138,  43, 226),
+        Color.FromRgb(148,   0, 211),
         Color.FromRgb(200,   0, 200),
+        // Roses
         Color.FromRgb(255, 105, 180),
+        Color.FromRgb(255,  20, 147),
+        Color.FromRgb(255, 182, 193),
+        Color.FromRgb(219, 112, 147),
+        // Marrons / Terre
         Color.FromRgb(139,  69,  19),
-        Color.FromRgb(0,     0,   0),
+        Color.FromRgb(160,  82,  45),
+        Color.FromRgb(210, 180, 140),
+        Color.FromRgb(245, 222, 179),
+        // Gris / Blanc / Noir
+        Color.FromRgb(220, 220, 220),
+        Color.FromRgb(169, 169, 169),
+        Color.FromRgb( 85,  85,  85),
+        Color.FromRgb(  0,   0,   0),
+        // Pastels enfant
+        Color.FromRgb(255, 200, 221),
+        Color.FromRgb(189, 224, 254),
+        Color.FromRgb(200, 255, 214),
+        Color.FromRgb(255, 255, 186),
     ];
 
     // â”€â”€ Templates â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
